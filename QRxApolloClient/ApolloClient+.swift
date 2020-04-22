@@ -20,11 +20,11 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(errors.first!))
+                            single(.error(ApolloError.gqlErrors(errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.success())
+                            single(.error(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
                         single(.error(error))
@@ -43,11 +43,11 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(errors.first!))
+                            single(.error(ApolloError.gqlErrors(errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.success())
+                            single(.error(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
                         single(.error(error))
@@ -66,11 +66,11 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(errors.first!))
+                            single(.error(ApolloError.gqlErrors(errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.success())
+                            single(.error(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
                         single(.error(error))
