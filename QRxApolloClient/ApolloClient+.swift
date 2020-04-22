@@ -24,7 +24,7 @@ extension Reactive where Base: ApolloClient {
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(CustomError.unknown))
+                            single(.success())
                         }
                     case .failure(let error):
                         single(.error(error))
@@ -47,7 +47,7 @@ extension Reactive where Base: ApolloClient {
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(CustomError.unknown))
+                            single(.success())
                         }
                     case .failure(let error):
                         single(.error(error))
@@ -70,7 +70,7 @@ extension Reactive where Base: ApolloClient {
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(CustomError.unknown))
+                            single(.success())
                         }
                     case .failure(let error):
                         single(.error(error))
