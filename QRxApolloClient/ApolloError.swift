@@ -6,6 +6,8 @@
 //  Copyright © 2020 Qusion. All rights reserved.
 //
 
+import Apollo
+
 public enum ApolloError: Error {
     case dataNotFound
     case gqlErrors([GraphQLError])

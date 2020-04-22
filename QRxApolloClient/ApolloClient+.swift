@@ -6,8 +6,8 @@
 //  Copyright © 2020 Qusion. All rights reserved.
 //
 
-import RxSwift
 import Apollo
+import RxSwift
 
 extension ApolloClient: ReactiveCompatible { }
 
@@ -20,7 +20,7 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(ApolloError.gqlErrors(errors)))
+                            single(.error(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
@@ -43,7 +43,7 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(ApolloError.gqlErrors(errors)))
+                            single(.error(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
@@ -66,7 +66,7 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(ApolloError.gqlErrors(errors)))
+                            single(.error(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
@@ -80,5 +80,9 @@ extension Reactive where Base: ApolloClient {
                 cancellable.cancel()
             }
         }
+    }
+    
+    private func handle(errors: [GraphQLError]) -> CustomError {
+        return CustomError.gqlErrors(errors)
     }
 }
