@@ -15,6 +15,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/QusionDev/ios-q-rx-apollo-client.git', :tag => spec.version }
   spec.source_files  = "QRxApolloClient", "QRxApolloClient/**/*.swift"
 
-  spec.dependency 'RxSwift', '>= 5.0'
-  spec.dependency 'Apollo', '~> 0.20.0'
+  spec.dependency 'RxSwift', '>= 5.0.0'
+  spec.dependency 'Apollo', '~> 0.19.0'
 end
