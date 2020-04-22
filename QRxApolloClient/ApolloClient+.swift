@@ -82,7 +82,7 @@ extension Reactive where Base: ApolloClient {
         }
     }
     
-    private func handle(errors: [GraphQLError]) -> CustomError {
-        return CustomError.gqlErrors(errors)
+    private func handle(errors: [GraphQLError]) -> ApolloError {
+        return ApolloError.gqlErrors(errors)
     }
 }
