@@ -13,7 +13,7 @@ extension ApolloClient: ReactiveCompatible { }
 
 extension Reactive where Base: ApolloClient {
     
-    func fetch<Query>(request: ApiQueryRequest<Query>) -> PrimitiveSequence<SingleTrait, Query.Data> where Query : GraphQLQuery {
+    public func fetch<Query>(request: ApiQueryRequest<Query>) -> PrimitiveSequence<SingleTrait, Query.Data> where Query : GraphQLQuery {
         return Single.create { (single) -> Disposable in
             let cancellable = self.base
                 .fetch(query: request.query, cachePolicy: request.cachePolicy, queue: request.queue) { (result) in
@@ -36,7 +36,7 @@ extension Reactive where Base: ApolloClient {
         }
     }
     
-    func watch<Query>(request: ApiQueryRequest<Query>) -> PrimitiveSequence<SingleTrait, Query.Data> where Query : GraphQLQuery {
+    public func watch<Query>(request: ApiQueryRequest<Query>) -> PrimitiveSequence<SingleTrait, Query.Data> where Query : GraphQLQuery {
         return Single.create { (single) -> Disposable in
             let cancellable = self.base
                 .watch(query: request.query, cachePolicy: request.cachePolicy, queue: request.queue) { (result) in
@@ -59,7 +59,7 @@ extension Reactive where Base: ApolloClient {
         }
     }
     
-    func perform<Mutation>(request: ApiMutationRequest<Mutation>) -> PrimitiveSequence<SingleTrait, Mutation.Data> where Mutation : GraphQLMutation {
+    public func perform<Mutation>(request: ApiMutationRequest<Mutation>) -> PrimitiveSequence<SingleTrait, Mutation.Data> where Mutation : GraphQLMutation {
         return Single.create { (single) -> Disposable in
             let cancellable = self.base
                 .perform(mutation: request.mutation, queue: request.queue) { (result) in
