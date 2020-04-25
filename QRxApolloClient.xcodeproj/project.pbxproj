@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1219042454830000E1DC2E /* ApolloMutationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1219032454830000E1DC2E /* ApolloMutationRequest.swift */; };
+		7A1219062454832600E1DC2E /* ApolloQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1219052454832600E1DC2E /* ApolloQueryRequest.swift */; };
 		7A2B0001244F236300751BFE /* ApolloClient+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B0000244F236300751BFE /* ApolloClient+.swift */; };
-		7A2B0003244F23DF00751BFE /* ApiMutationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B0002244F23DF00751BFE /* ApiMutationRequest.swift */; };
 		7A2B0005244F23F300751BFE /* ApiQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B0004244F23F300751BFE /* ApiQueryRequest.swift */; };
 		7A2BFFF0244F228200751BFE /* QRxApolloClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2BFFE6244F228200751BFE /* QRxApolloClient.framework */; };
 		7A2BFFF5244F228200751BFE /* QRxApolloClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2BFFF4244F228200751BFE /* QRxApolloClientTests.swift */; };
@@ -27,8 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1219032454830000E1DC2E /* ApolloMutationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloMutationRequest.swift; sourceTree = "<group>"; };
+		7A1219052454832600E1DC2E /* ApolloQueryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloQueryRequest.swift; sourceTree = "<group>"; };
 		7A2B0000244F236300751BFE /* ApolloClient+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApolloClient+.swift"; sourceTree = "<group>"; };
-		7A2B0002244F23DF00751BFE /* ApiMutationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMutationRequest.swift; sourceTree = "<group>"; };
 		7A2B0004244F23F300751BFE /* ApiQueryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQueryRequest.swift; sourceTree = "<group>"; };
 		7A2BFFE6244F228200751BFE /* QRxApolloClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRxApolloClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2BFFE9244F228200751BFE /* QRxApolloClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRxApolloClient.h; sourceTree = "<group>"; };
@@ -82,9 +84,10 @@
 				7A2BFFE9244F228200751BFE /* QRxApolloClient.h */,
 				7A2BFFEA244F228200751BFE /* Info.plist */,
 				7A2B0000244F236300751BFE /* ApolloClient+.swift */,
-				7A2B0002244F23DF00751BFE /* ApiMutationRequest.swift */,
 				7A2B0004244F23F300751BFE /* ApiQueryRequest.swift */,
 				7A7954EC2450627E0071AB1F /* ApolloError.swift */,
+				7A1219032454830000E1DC2E /* ApolloMutationRequest.swift */,
+				7A1219052454832600E1DC2E /* ApolloQueryRequest.swift */,
 			);
 			path = QRxApolloClient;
 			sourceTree = "<group>";
@@ -208,9 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1219062454832600E1DC2E /* ApolloQueryRequest.swift in Sources */,
 				7A2B0001244F236300751BFE /* ApolloClient+.swift in Sources */,
 				7A7954ED2450627E0071AB1F /* ApolloError.swift in Sources */,
-				7A2B0003244F23DF00751BFE /* ApiMutationRequest.swift in Sources */,
+				7A1219042454830000E1DC2E /* ApolloMutationRequest.swift in Sources */,
 				7A2B0005244F23F300751BFE /* ApiQueryRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +375,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.7;
+				MARKETING_VERSION = 0.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qusion.QRxApolloClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -398,7 +402,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.7;
+				MARKETING_VERSION = 0.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qusion.QRxApolloClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

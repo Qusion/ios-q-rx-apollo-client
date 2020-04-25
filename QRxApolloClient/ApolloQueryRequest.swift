@@ -1,8 +1,8 @@
 //
-//  ApiQueryRequest.swift
+//  ApolloQueryRequest.swift
 //  QRxApolloClient
 //
-//  Created by Tomas Holicky on 21/04/2020.
+//  Created by Tomas Holicky on 25/04/2020.
 //  Copyright © 2020 Qusion. All rights reserved.
 //
 
