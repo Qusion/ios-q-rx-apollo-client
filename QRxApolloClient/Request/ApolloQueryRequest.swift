@@ -14,7 +14,7 @@ public struct ApolloQueryRequest<Query: GraphQLQuery> {
     let cachePolicy: CachePolicy
     let queue: DispatchQueue
     
-    public init(query: Query, cachePolicy: CachePolicy? = nil, queue: DispatchQueue = .global(qos: DispatchQoS.QoSClass.background)) {
+    public init(query: Query, cachePolicy: CachePolicy? = nil, queue: DispatchQueue = .main) {
         self.query = query
         self.queue = queue
         if let cachePolicy = cachePolicy {

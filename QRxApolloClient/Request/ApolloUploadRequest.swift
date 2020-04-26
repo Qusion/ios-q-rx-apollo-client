@@ -14,7 +14,7 @@ public struct ApolloUploadRequest<Operation: GraphQLOperation> {
     let files: [GraphQLFile]
     let queue: DispatchQueue
     
-    public init(operation: Operation, context: UnsafeMutableRawPointer? = nil, files: [GraphQLFile], queue: DispatchQueue = .global(qos: DispatchQoS.QoSClass.background)) {
+    public init(operation: Operation, context: UnsafeMutableRawPointer? = nil, files: [GraphQLFile], queue: DispatchQueue = .main) {
         self.operation = operation
         self.context = context
         self.files = files

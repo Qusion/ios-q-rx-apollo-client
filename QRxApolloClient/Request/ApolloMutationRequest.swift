@@ -12,7 +12,7 @@ public struct ApolloMutationRequest<Mutation: GraphQLMutation> {
     let mutation: Mutation
     let queue: DispatchQueue
     
-    public init(mutation: Mutation, queue: DispatchQueue = .global(qos: DispatchQoS.QoSClass.background)) {
+    public init(mutation: Mutation, queue: DispatchQueue = .main) {
         self.mutation = mutation
         self.queue = queue
     }

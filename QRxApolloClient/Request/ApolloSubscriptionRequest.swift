@@ -12,7 +12,7 @@ public struct ApolloSubscriptionRequest<Subscription: GraphQLSubscription> {
     let subscription: Subscription
     let queue: DispatchQueue
     
-    public init(subscription: Subscription, queue: DispatchQueue = .global(qos: DispatchQoS.QoSClass.background)) {
+    public init(subscription: Subscription, queue: DispatchQueue = .main) {
         self.subscription = subscription
         self.queue = queue
     }
