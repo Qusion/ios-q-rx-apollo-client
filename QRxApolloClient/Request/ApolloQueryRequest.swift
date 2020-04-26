@@ -14,25 +14,21 @@ public struct ApolloQueryRequest<Query: GraphQLQuery> {
     let cachePolicy: CachePolicy
     let queue: DispatchQueue
     
-    public init(query: Query, cachePolicy: CachePolicy = evaluateCachePolicy(), queue: DispatchQueue = .global(qos: DispatchQoS.QoSClass.background)) {
+    public init(query: Query, cachePolicy: CachePolicy?, queue: DispatchQueue = .global(qos: DispatchQoS.QoSClass.background)) {
         self.query = query
-        self.cachePolicy = cachePolicy
         self.queue = queue
-    }
-    
-    private func evaluateCachePolicy() -> CachePolicy {
-        if isNetworkReachable() {
-            return .fetchIgnoringCacheData
+        if let cachePolicy = cachePolicy {
+            self.cachePolicy = cachePolicy
         } else {
-            return .returnCacheDataDontFetch
+            do {
+                if try Reachability().connection == .unavailable {
+                    self.cachePolicy = .returnCacheDataDontFetch
+                } else {
+                    self.cachePolicy = .fetchIgnoringCacheData
+                }
+            } catch {
+                self.cachePolicy = .fetchIgnoringCacheData
+            }
         }
-    }
-    
-    private func isNetworkReachable() -> Bool {
-        guard let connection = Reachability()?.connection else {
-            return false
-        }
-        
-        return connection != .none
     }
 }

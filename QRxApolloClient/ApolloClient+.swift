@@ -88,7 +88,7 @@ extension Reactive where Base: ApolloClient {
     /// Subscribe to a subscription.
     public func subscribe<Subscription>(request: ApolloSubscriptionRequest<Subscription>) -> PrimitiveSequence<SingleTrait, Subscription.Data> where Subscription : GraphQLSubscription {
         return Single.create { (single) -> Disposable in
-            let cancellable = self.apollo
+            let cancellable = self.base
                 .subscribe(subscription: request.subscription, queue: request.queue) { (result) in
                     switch result {
                     case .success(let data):
@@ -112,7 +112,7 @@ extension Reactive where Base: ApolloClient {
     /// Uploads the given files with the given operation.
     public func upload<Operation>(request: ApolloUploadRequest<Operation>) -> PrimitiveSequence<SingleTrait, Operation.Data> where Operation : GraphQLOperation {
         return Single.create { (single) -> Disposable in
-            let cancellable = self.apollo
+            let cancellable = self.base
                 .upload(operation: request.operation, context: request.context, files: request.files, queue: request.queue) { (result) in
                     switch result {
                     case .success(let data):
