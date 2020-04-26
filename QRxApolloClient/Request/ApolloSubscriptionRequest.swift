@@ -8,7 +8,7 @@
 
 import Apollo
 
-struct ApolloSubscriptionRequest<Subscription: GraphQLSubscription> {
+public struct ApolloSubscriptionRequest<Subscription: GraphQLSubscription> {
     let subscription: Subscription
     let queue: DispatchQueue
     

@@ -8,7 +8,7 @@
 
 import Apollo
 
-struct ApolloUploadRequest<Operation: GraphQLOperation> {
+public struct ApolloUploadRequest<Operation: GraphQLOperation> {
     let operation: Operation
     let context: UnsafeMutableRawPointer?
     let files: [GraphQLFile]
