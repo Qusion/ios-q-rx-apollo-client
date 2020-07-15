@@ -33,4 +33,5 @@ let package = Package(
             dependencies: ["ios-q-rx-apollo-client"]),
     ],
     swiftLanguageVersions: [.v5]
+    
 )
