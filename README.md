@@ -5,6 +5,7 @@
 [![Version](https://img.shields.io/cocoapods/v/QRxApolloClient.svg?style=flat)](http://cocoapods.org/pods/QRxApolloClient)
 [![License](https://img.shields.io/cocoapods/l/QRxApolloClient.svg?style=flat)](http://cocoapods.org/pods/QRxApolloClient)
 [![Platform](https://img.shields.io/cocoapods/p/QRxApolloClient.svg?style=flat)](http://cocoapods.org/pods/QRxApolloClient)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 RxSwift extensions for Apollo Client.
 
