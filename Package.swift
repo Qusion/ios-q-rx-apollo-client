@@ -14,6 +14,15 @@ let package = Package(
             targets: ["ios-q-rx-apollo-client"]),
     ],
     dependencies: [
+        .package(
+            url: "https://github.com/apollographql/apollo-ios",
+            .upToNextMajor(from: "0.29.1")),
+        .package(
+            url: "https://github.com/ashleymills/Reachability.swift",
+            .upToNextMajor(from: "5.0.0")),
+        .package(
+            url: "https://github.com/ReactiveX/RxSwift",
+            .upToNextMajor(from: "5.1.1"))
     ],
     targets: [
         .target(

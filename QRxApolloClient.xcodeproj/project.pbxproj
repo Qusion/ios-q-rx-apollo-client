@@ -3,13 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A346BE624BF394400D02E9F /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 0A346BE524BF394400D02E9F /* Apollo */; };
-		0A346BE924BF39AC00D02E9F /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 0A346BE824BF39AC00D02E9F /* Reachability */; };
-		0A346BEC24BF39EA00D02E9F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A346BEB24BF39EA00D02E9F /* RxSwift */; };
 		7A1219042454830000E1DC2E /* ApolloMutationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1219032454830000E1DC2E /* ApolloMutationRequest.swift */; };
 		7A1219062454832600E1DC2E /* ApolloQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1219052454832600E1DC2E /* ApolloQueryRequest.swift */; };
 		7A1219092455AB3E00E1DC2E /* ApolloSubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1219082455AB3E00E1DC2E /* ApolloSubscriptionRequest.swift */; };
@@ -51,9 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A346BEC24BF39EA00D02E9F /* RxSwift in Frameworks */,
-				0A346BE624BF394400D02E9F /* Apollo in Frameworks */,
-				0A346BE924BF39AC00D02E9F /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +141,6 @@
 			);
 			name = QRxApolloClient;
 			packageProductDependencies = (
-				0A346BE524BF394400D02E9F /* Apollo */,
-				0A346BE824BF39AC00D02E9F /* Reachability */,
-				0A346BEB24BF39EA00D02E9F /* RxSwift */,
 			);
 			productName = QRxApolloClient;
 			productReference = 7A2BFFE6244F228200751BFE /* QRxApolloClient.framework */;
@@ -202,9 +193,6 @@
 			);
 			mainGroup = 7A2BFFDC244F228200751BFE;
 			packageReferences = (
-				0A346BE424BF394400D02E9F /* XCRemoteSwiftPackageReference "apollo-ios" */,
-				0A346BE724BF39AC00D02E9F /* XCRemoteSwiftPackageReference "Reachability" */,
-				0A346BEA24BF39EA00D02E9F /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 7A2BFFE7244F228200751BFE /* Products */;
 			projectDirPath = "";
@@ -507,51 +495,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0A346BE424BF394400D02E9F /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apollographql/apollo-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.29.1;
-			};
-		};
-		0A346BE724BF39AC00D02E9F /* XCRemoteSwiftPackageReference "Reachability" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		0A346BEA24BF39EA00D02E9F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0A346BE524BF394400D02E9F /* Apollo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A346BE424BF394400D02E9F /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = Apollo;
-		};
-		0A346BE824BF39AC00D02E9F /* Reachability */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A346BE724BF39AC00D02E9F /* XCRemoteSwiftPackageReference "Reachability" */;
-			productName = Reachability;
-		};
-		0A346BEB24BF39EA00D02E9F /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A346BEA24BF39EA00D02E9F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A2BFFDD244F228200751BFE /* Project object */;
 }
