@@ -22,5 +22,6 @@ let package = Package(
         .testTarget(
             name: "ios-q-rx-apollo-clientTests",
             dependencies: ["ios-q-rx-apollo-client"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
