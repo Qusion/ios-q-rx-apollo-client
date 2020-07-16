@@ -24,7 +24,7 @@ let package = Package(
             .upToNextMinor(from: "5.1.1")),
     ],
     targets: [
-        .target(name: "QRxApolloClient", dependencies: ["Apollo", "RxSwift", "Reachability"])
+        .target(name: "QRxApolloClient", dependencies: ["Apollo", "RxSwift", "Reachability"], path: "QRxApolloClient")
     ],
     swiftLanguageVersions: [.v5]
 )
