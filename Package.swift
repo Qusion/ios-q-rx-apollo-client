@@ -15,8 +15,7 @@ let package = Package(
             targets: ["QRxApolloClient"]),
     ],
     dependencies: [
-        .package(
-            url: "https://github.com/apollographql/apollo-ios.git",
+        .package(name: "Apollo", url: "https://github.com/apollographql/apollo-ios.git",
             .upToNextMinor(from: "0.28.0")),
         .package(
             url: "https://github.com/ashleymills/Reachability.swift.git",
