@@ -7,6 +7,7 @@
 //
 
 import Apollo
+import Dispatch
 
 public struct ApolloUploadRequest<Operation: GraphQLOperation> {
     let operation: Operation

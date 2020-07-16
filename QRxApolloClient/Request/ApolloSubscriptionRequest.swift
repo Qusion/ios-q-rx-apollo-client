@@ -7,6 +7,7 @@
 //
 
 import Apollo
+import Dispatch
 
 public struct ApolloSubscriptionRequest<Subscription: GraphQLSubscription> {
     let subscription: Subscription

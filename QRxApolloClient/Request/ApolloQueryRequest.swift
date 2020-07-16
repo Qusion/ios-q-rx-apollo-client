@@ -8,6 +8,7 @@
 
 import Apollo
 import Reachability
+import Dispatch
 
 public struct ApolloQueryRequest<Query: GraphQLQuery> {
     let query: Query

@@ -7,6 +7,7 @@
 //
 
 import Apollo
+import Dispatch
 
 public struct ApolloMutationRequest<Mutation: GraphQLMutation> {
     let mutation: Mutation
