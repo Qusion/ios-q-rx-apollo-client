@@ -4,37 +4,31 @@
 import PackageDescription
 
 let package = Package(
-    name: "ios-q-rx-apollo-client",
+    name: "QRxApolloClient",
     platforms: [.macOS(.v10_12),
                 .iOS(.v11),
                 .tvOS(.v10),
                 .watchOS(.v3)],
     products: [
         .library(
-            name: "ios-q-rx-apollo-client",
-            targets: ["ios-q-rx-apollo-client"]),
+            name: "QRxApolloClient",
+            targets: ["QRxApolloClient"]),
     ],
     dependencies: [
         .package(
             url: "https://github.com/apollographql/apollo-ios",
-            .exact("0.29.1")
-        ),
+            .upToNextMinor(from: "0.19.1")),
         .package(
             url: "https://github.com/ashleymills/Reachability.swift",
-            .exact("5.0.0")
-        ),
+            .upToNextMinor(from: "5.0.0")),
         .package(
             url: "https://github.com/ReactiveX/RxSwift",
-            .exact("5.1.1")
-        )
+            .upToNextMinor(from: "5.1.1")),
     ],
     targets: [
         .target(
-            name: "ios-q-rx-apollo-client",
-            dependencies: []),
-        .testTarget(
-            name: "ios-q-rx-apollo-clientTests",
-            dependencies: ["ios-q-rx-apollo-client"]),
+            name: "QRxApolloClient",
+            dependencies: ["RxSwift", "Apollo", "Reachability"])
     ],
     swiftLanguageVersions: [.v5]
 )
