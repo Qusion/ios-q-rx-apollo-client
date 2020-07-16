@@ -16,17 +16,17 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/apollographql/apollo-ios",
+            url: "https://github.com/apollographql/apollo-ios.git",
             .upToNextMinor(from: "0.19.1")),
         .package(
-            url: "https://github.com/ashleymills/Reachability.swift",
+            url: "https://github.com/ashleymills/Reachability.swift.git",
             .upToNextMinor(from: "5.0.0")),
         .package(
-            url: "https://github.com/ReactiveX/RxSwift",
+            url: "https://github.com/ReactiveX/RxSwift.git",
             .upToNextMinor(from: "5.1.1")),
     ],
     targets: [
-        .target(name: "QRxApolloClient", path: "QRxApolloClient")
+        .target(name: "QRxApolloClient", dependencies: ["Apollo", "RxSwift", "Reachability"])
     ],
     swiftLanguageVersions: [.v5]
 )
