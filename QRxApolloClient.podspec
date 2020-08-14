@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "QRxApolloClient"
-  spec.version      = "0.0.24"
+  spec.version      = "0.0.25"
   spec.summary      = "RxSwift extensions for Apollo Client."
   spec.homepage     = "https://github.com/QusionDev/ios-q-rx-apollo-client/blob/master/README.md"
   spec.license      = {
