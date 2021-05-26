@@ -21,14 +21,14 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(self.handle(errors: errors)))
+                            single(.failure(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(ApolloError.dataNotFound))
+                            single(.failure(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
-                        single(.error(error))
+                        single(.failure(error))
                     }
             }
             return Disposables.create {
@@ -45,14 +45,14 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(self.handle(errors: errors)))
+                            single(.failure(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(ApolloError.dataNotFound))
+                            single(.failure(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
-                        single(.error(error))
+                        single(.failure(error))
                     }
             }
             return Disposables.create {
@@ -69,14 +69,14 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(self.handle(errors: errors)))
+                            single(.failure(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(ApolloError.dataNotFound))
+                            single(.failure(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
-                        single(.error(error))
+                        single(.failure(error))
                     }
             }
             return Disposables.create {
@@ -93,14 +93,14 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(self.handle(errors: errors)))
+                            single(.failure(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(ApolloError.dataNotFound))
+                            single(.failure(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
-                        single(.error(error))
+                        single(.failure(error))
                     }
             }
             return Disposables.create {
@@ -117,14 +117,14 @@ extension Reactive where Base: ApolloClient {
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
-                            single(.error(self.handle(errors: errors)))
+                            single(.failure(self.handle(errors: errors)))
                         } else if let data = data.data {
                             single(.success(data))
                         } else {
-                            single(.error(ApolloError.dataNotFound))
+                            single(.failure(ApolloError.dataNotFound))
                         }
                     case .failure(let error):
-                        single(.error(error))
+                        single(.failure(error))
                     }
             }
             return Disposables.create {
