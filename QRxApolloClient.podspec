@@ -16,6 +16,6 @@ Pod::Spec.new do |spec|
   spec.source_files  = "QRxApolloClient", "QRxApolloClient/**/*.swift"
 
   spec.dependency 'RxSwift', '>= 6.0.0'
-  spec.dependency 'Apollo', '~> 0.43.0'
+  spec.dependency 'Apollo', '~> 0.38.0'
   spec.dependency 'ReachabilitySwift', '~> 5.0.0'
 end

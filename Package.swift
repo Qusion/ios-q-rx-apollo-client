@@ -16,9 +16,9 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Apollo", url: "https://github.com/apollographql/apollo-ios.git",
-            .upToNextMinor(from: "0.43.0")),
+            .upToNextMinor(from: "0.38.0")),
         .package(name: "Reachability", url: "https://github.com/ashleymills/Reachability.swift.git",
-            .upToNextMinor(from: "5.1.0")),
+            .upToNextMinor(from: "5.0.0")),
         .package(
             url: "https://github.com/ReactiveX/RxSwift.git",
             .upToNextMinor(from: "6.0.0")),
