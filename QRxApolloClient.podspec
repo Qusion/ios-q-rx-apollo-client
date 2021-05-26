@@ -17,5 +17,5 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'RxSwift', '>= 6.0.0'
   spec.dependency 'Apollo', '~> 0.43.0'
-  spec.dependency 'ReachabilitySwift', '~> 5.1.0'
+  spec.dependency 'ReachabilitySwift', '~> 5.0.0'
 end
