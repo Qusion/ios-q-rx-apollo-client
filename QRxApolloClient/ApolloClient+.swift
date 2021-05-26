@@ -41,7 +41,7 @@ extension Reactive where Base: ApolloClient {
     public func watch<Query>(request: ApolloQueryRequest<Query>) -> PrimitiveSequence<SingleTrait, Query.Data> where Query : GraphQLQuery {
         return Single.create { (single) -> Disposable in
             let cancellable = self.base
-                .watch(query: request.query, cachePolicy: request.cachePolicy, queue: request.queue) { (result) in
+                .watch(query: request.query, cachePolicy: request.cachePolicy) { (result) in
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
@@ -113,7 +113,7 @@ extension Reactive where Base: ApolloClient {
     public func upload<Operation>(request: ApolloUploadRequest<Operation>) -> PrimitiveSequence<SingleTrait, Operation.Data> where Operation : GraphQLOperation {
         return Single.create { (single) -> Disposable in
             let cancellable = self.base
-                .upload(operation: request.operation, context: request.context, files: request.files, queue: request.queue) { (result) in
+                .upload(operation: request.operation, files: request.files, queue: request.queue) { (result) in
                     switch result {
                     case .success(let data):
                         if let errors = data.errors {
